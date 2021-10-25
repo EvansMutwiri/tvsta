@@ -2,7 +2,9 @@ package com.evans.tvsta
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.GridLayout
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evans.tvsta.adapter.TvShowAdapter
 import com.evans.tvsta.databinding.ActivityMainBinding
@@ -30,9 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerView.apply {
             adapter = tvShowAdapter
-            layoutManager = LinearLayoutManager(
-                this@MainActivity, LinearLayoutManager.HORIZONTAL,
-                false
+            layoutManager = GridLayoutManager(
+                this@MainActivity, 2
             )
             setHasFixedSize(true)
         }
