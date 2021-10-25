@@ -15,7 +15,7 @@ import javax.inject.Singleton
 object AppModule {
 
     @Provides
-    fun provideBaseUrl()= Constants.BASE_URL
+    fun provideBaseUrl() = Constants.BASE_URL
 
     @Provides
     @Singleton
